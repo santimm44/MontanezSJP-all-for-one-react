@@ -1,14 +1,11 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { Link } from 'react-router-dom'
 
 function App() {
 
   return (
-    <div className="max-h-screen bg-[url(src/assets/resources/background.jpeg)] bg-cover bg-no-repeat  bg-center grid grid-col-12 grid-rows-12">
-      <div className="lg:col-start-8 lg:col-end-9 lg:row-start-4 lg:row-end-9 flex flex-col bg-[#85735D] shadow-[.5rem_.5rem_0rem_.5rem_#000] rounded-[2rem]">
+    <div className="min-h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-col-12 grid-rows-12">
+      <div className="lg:col-start-5 lg:col-end-8 lg:row-start-4 lg:row-end-9 flex flex-col bg-[#85735D] shadow-[.5rem_.5rem_0rem_.5rem_#000] rounded-[2rem]">
         <li>
           <ul>
             <Link to="/AddingTwoNumbers">
