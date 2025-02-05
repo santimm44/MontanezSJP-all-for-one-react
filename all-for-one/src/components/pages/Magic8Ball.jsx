@@ -1,4 +1,4 @@
-const ResestaurantPicker = () => {
+const Magic8Ball = () => {
   return (
     <div className="min-h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-col-12 grid-rows-12">
       <button className="lg:row-start-4 lg:row-end-11 lg:col-start-3 lg:col-end-8 ">
@@ -23,12 +23,12 @@ const ResestaurantPicker = () => {
 
       <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:col-start-5 lg:col-end-10">
         <div className="flex justify-between align-baseline p-[0rem_.75rem]">
-          <h2>Enter a string</h2>
-          <input type="text" placeholder="String" />
+          <h2>Ask your question: </h2>
+          <input type="text" placeholder="Question" />
         </div>
       </div>
     </div>
   );
 };
 
-export default ResestaurantPicker;
+export default Magic8Ball;
