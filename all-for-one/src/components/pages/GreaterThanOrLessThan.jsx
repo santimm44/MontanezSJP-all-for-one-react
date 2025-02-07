@@ -16,7 +16,7 @@ const GreaterThanOrLessThan = () => {
       <NavBar />
 
       <button
-        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9"
+        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9 max-md:col-start-5 max-md:col-end-9 max-md:row-start-2 max-md:row-end-5"
         onClick={fetchAPI}
       >
         {/*how do I target the castle for hover?*/}
@@ -37,8 +37,8 @@ const GreaterThanOrLessThan = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-9 md:row-end-12 md:col-start-2 md:col-end-12">
-        <div className="flex justify-between align-baseline p-[0rem_.75rem]">
+      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-9 md:row-end-12 md:col-start-2 md:col-end-12 max-md:row-start-7 max-md:row-end-12 max-md:col-start-2 max-md:col-end-12">
+        <div className="flex md:justify-between md:align-baseline max-md:flex-col max-md:gap-y-4 p-[0rem_.75rem]">
           <h2 className="text-fluid">Enter a number</h2>
           <input
             className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
@@ -47,7 +47,7 @@ const GreaterThanOrLessThan = () => {
             onChange={(event) => getFirstNumber(event.target.value)}
           />
         </div>
-        <div className="flex mt-4 justify-between align-baseline p-[0rem_.75rem]">
+        <div className="flex md:justify-between md:align-baseline max-md:flex-col max-md:gap-y-4 p-[0rem_.75rem]">
           <h2 className="text-fluid">Enter a number</h2>
           <input
             className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"

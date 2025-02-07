@@ -16,7 +16,7 @@ const AddingTwoNumbers = () => {
     <div className="h-screen max-h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat grid grid-cols-12 grid-rows-12">
       <NavBar />
       <button
-        className="md:row-start-3 md:row-end-10 md:col-start-2 md:col-end-7"
+        className="md:row-start-3 md:row-end-10 md:col-start-2 md:col-end-7 max-md:col-start-5 max-md:col-end-9 max-md:row-start-2 max-md:row-end-5"
         onClick={fetchAPI}
       >
         <div className="bg-[#FAF9F600] w-full h-full ">
@@ -36,7 +36,7 @@ const AddingTwoNumbers = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-7 md:row-end-10 md:col-start-8 md:col-end-12">
+      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-7 md:row-end-10 md:col-start-8 md:col-end-12 max-md:row-start-7 max-md:row-end-12 max-md:col-start-2 max-md:col-end-12">
         <div className="grid grid-cols-2 p-[0rem_.75rem]">
           <h2 className="text-fluid">Enter First Number</h2>
           <input

@@ -14,7 +14,7 @@ const ResestaurantPicker = () => {
       <NavBar />
 
       <button
-        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9"
+        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9 max-md:col-start-5 max-md:col-end-9 max-md:row-start-2 max-md:row-end-5"
         onClick={fetchAPI}
       >
         {/*how do I target the castle for hover?*/}
@@ -35,8 +35,8 @@ const ResestaurantPicker = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] overflow-y-scroll place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-10 md:row-end-12 md:col-start-2 md:col-end-12">
-        <div className="flex justify-between align-baseline p-[0rem_.75rem]">
+      <div className="bg-[#85735D] overflow-y-scroll place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-10 md:row-end-12 md:col-start-2 md:col-end-12 max-md:row-start-7 max-md:row-end-12 max-md:col-start-2 max-md:col-end-12">
+        <div className="flex md:justify-between md:align-baseline max-md:flex-col-reverse max-md:gap-y-8 p-[0rem_.75rem]">
           <h2 className="text-fluid flex flex-wrap">
             Enter a string (E.g. A, B, or C) or (Mexican, Chinese, or
             Italian)

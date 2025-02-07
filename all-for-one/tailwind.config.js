@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {},
     fontSize: {
-            'fluid': 'clamp(.2rem, 3vw, 1.75rem)',
+            'fluid': 'clamp(1rem, 3vw, 1.5rem)',
             'fluid2': '5rem'
          },
   },

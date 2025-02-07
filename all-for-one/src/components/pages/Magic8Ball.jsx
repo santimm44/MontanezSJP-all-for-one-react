@@ -15,7 +15,7 @@ const Magic8Ball = () => {
       <NavBar />
 
       <button
-        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9 "
+        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9 max-md:col-start-5 max-md:col-end-9 max-md:row-start-2 max-md:row-end-5"
         onClick={fetchAPI}
       >
         {/*how do I target the castle for hover?*/}
@@ -36,8 +36,8 @@ const Magic8Ball = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] place-content-center shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-9 md:row-end-12 md:col-start-4 md:col-end-10">
-        <div className="grid grid-cols-2 p-[0rem_.75rem]">
+      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] place-content-center shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-9 md:row-end-12 md:col-start-4 md:col-end-10 max-md:row-start-7 max-md:row-end-12 max-md:col-start-2 max-md:col-end-12">
+        <div className="md:grid md:grid-cols-2 max-md:flex max-md:flex-col max-md:gap-y-4 p-[0rem_.75rem]">
           <h2 className="text-fluid">Ask your question: </h2>
           <input
             className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
