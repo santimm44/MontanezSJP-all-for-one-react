@@ -1,12 +1,36 @@
+import { madlibAPICall } from "../services/services";
+import { useState } from "react";
+
 const Madlib = () => {
+  const [madlibMonster, getMadlibMonster] = useState("");
+  const [madlibMonsterAdjective, getMadlibMonsterAdjective] = useState("");
+  const [madlibNoun1, getMadlibNoun1] = useState("");
+  const [madlibNoun2, getMadlibNoun2] = useState("");
+  const [madlibObject1, getMadlibObject1] = useState("");
+  const [madlibObject2, getMadlibObject2] = useState("");
+  const [madlibLocation1, getmadlibLocation1] = useState("");
+  const [madlibLocation2, getmadlibLocation2] = useState("");
+  const [madlibUserName, getmadlibUserName] = useState("");
+  const [madlibAdjective, getmadlibAdjective] = useState("");
+
+  const [fetchData, setFetchData] = useState("");
+
+  const fetchAPI = async () => {
+    setFetchData(await madlibAPICall(madlibMonster,madlibMonsterAdjective,madlibNoun1,madlibNoun2,madlibObject1,madlibObject2,madlibLocation1,madlibLocation2,madlibUserName,madlibAdjective));
+
+    console.log(fetchData)
+  };
+
   return (
-    <div className="min-h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-col-12 grid-rows-12">
-      <button className="lg:row-start-4 lg:row-end-11 lg:col-start-3 lg:col-end-8 ">
-        {" "}
+    <div className="h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+      <button
+        className="lg:row-start-2 lg:row-end-3 lg:col-start-6 lg:col-end-8 z-0"
+        onClick={fetchAPI  }
+      >
         {/*how do I target the castle for hover?*/}
-        <div className="bg-[#FAF9F600] w-1/2 h-4/5 z-1 ">
+        <div className="bg-[#FAF9F600]  w-full h-full ">
           <svg
-            className="w-full h-full bg-[#FAF9f6] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500]"
+            className="w-full h-full rounded-[2rem] bg-[#FAF9f6] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500]"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
           >
@@ -21,19 +45,22 @@ const Madlib = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:col-start-5 lg:col-end-10">
-        <div className="flex justify-between align-baseline p-[0rem_.75rem]">
-          <input type="number" placeholder="Name" />
-          <input type="number" placeholder="Name" />
-          <input type="number" placeholder="Name" />
-          <input type="number" placeholder="Name" />
-          <input type="number" placeholder="Name" />
-          <input type="number" placeholder="Name" />
-          <input type="number" placeholder="Name" />
-          <input type="number" placeholder="Name" />
-          <input type="number" placeholder="Name" />
-          <input type="number" placeholder="Name" />
+      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-4 lg:row-end-12 lg:col-start-2 lg:col-end-12">
+        <div className="h-auto grid grid-rows-6 gap-y-16 grid-cols-4 p-[0rem_.75rem]">
+          <input type="text" placeholder="Monster" onChange={(event)=>getMadlibMonster(event.target.value)} />
+          <input type="text" placeholder="Monster Adjective" onChange={(event)=>getMadlibMonsterAdjective(event.target.value)} />
+          <input type="text" placeholder="Noun" onChange={(event)=>getMadlibNoun1(event.target.value)} />
+          <input type="text" placeholder="Second Noun" onChange={(event)=>getMadlibNoun2(event.target.value)} />
+          <input type="text" placeholder="First Object" onChange={(event)=>getMadlibObject1(event.target.value)} />
+          <input type="text" placeholder="Second Object" onChange={(event)=>getMadlibObject2(event.target.value)} />
+          <input type="text" placeholder="First Location" onChange={(event)=>getmadlibLocation1(event.target.value)} />
+          <input type="text" placeholder="Second Location" onChange={(event)=>getmadlibLocation2(event.target.value)} />
+          <input className="col-start-2" type="Your Username" placeholder="Name" onChange={(event)=>getmadlibUserName(event.target.value)} />
+          <input className="col-start-3" type="text" placeholder="Username Adjective" onChange={(event)=>getmadlibAdjective(event.target.value)} />
         </div>
+        <div className="">
+          {fetchData}
+          </div>
       </div>
     </div>
   );

@@ -1,12 +1,22 @@
+import { useState } from "react";
+import { reverseItNumbersOnlyAPICall } from "../services/services";
+
 const ReverseItNumbersOnly = () => {
+
+  const [number, getNumber] = useState(0);
+  const [fetchData, setFetchData] = useState([]);
+
+  const fetchAPI = async () => {
+    setFetchData(await reverseItNumbersOnlyAPICall(number));
+  };
+
   return (
-    <div className="min-h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-col-12 grid-rows-12">
-      <button className="lg:row-start-4 lg:row-end-11 lg:col-start-3 lg:col-end-8 ">
-        {" "}
+    <div className="h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+       <button className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9" onClick={fetchAPI}>
         {/*how do I target the castle for hover?*/}
-        <div className="bg-[#FAF9F600] w-1/2 h-4/5 z-1 ">
+        <div className="bg-[#FAF9F600]  w-full h-full ">
           <svg
-            className="w-full h-full bg-[#FAF9f6] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500]"
+            className="w-full h-full bg-[#FAF9f6] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500]"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
           >
@@ -21,10 +31,13 @@ const ReverseItNumbersOnly = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:col-start-5 lg:col-end-10">
+      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-10 lg:row-end-12 lg:col-start-2 lg:col-end-12">
         <div className="flex justify-between align-baseline p-[0rem_.75rem]">
           <h2>Enter a number</h2>
-          <input type="text" placeholder="String" />
+          <input type="number" placeholder="Number" onChange={(event)=>getNumber(event.target.value)}/>
+        </div>
+        <div>
+          {fetchData}
         </div>
       </div>
     </div>

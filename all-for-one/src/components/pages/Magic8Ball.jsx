@@ -1,12 +1,22 @@
+import { magic8BallAPICall } from "../services/services";
+import { useState } from "react";
+
 const Magic8Ball = () => {
+
+  const [userString, getString] = useState("");
+  const [fetchData, setFetchData] = useState([]);
+
+  const fetchAPI = async () => {
+    setFetchData(await magic8BallAPICall(userString));
+  };
+
   return (
-    <div className="min-h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-col-12 grid-rows-12">
-      <button className="lg:row-start-4 lg:row-end-11 lg:col-start-3 lg:col-end-8 ">
-        {" "}
+    <div className="h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+        <button className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9 " onClick={fetchAPI}>
         {/*how do I target the castle for hover?*/}
-        <div className="bg-[#FAF9F600] w-1/2 h-4/5 z-1 ">
+        <div className="bg-[#FAF9F600]  w-full h-full ">
           <svg
-            className="w-full h-full bg-[#FAF9f6] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500]"
+            className="w-full h-full bg-[#FAF9f6] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500]"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
           >
@@ -21,10 +31,15 @@ const Magic8Ball = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:col-start-5 lg:col-end-10">
+      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-9 lg:row-end-12 lg:col-start-4 lg:col-end-10">
         <div className="flex justify-between align-baseline p-[0rem_.75rem]">
           <h2>Ask your question: </h2>
-          <input type="text" placeholder="Question" />
+          <input type="text" placeholder="Question" onChange={(event)=>getString(event.target.value)} />
+        </div>
+        <div>
+          <h1>
+            The Magic 8 Ball Says: {fetchData}
+          </h1>
         </div>
       </div>
     </div>

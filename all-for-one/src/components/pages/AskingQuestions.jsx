@@ -1,12 +1,25 @@
+import { useState } from "react";
+import { askingQuestionsAPICall } from "../services/services";
+
 const AskingQuestions = () => {
+
+  const [number, getNumber] = useState(0);
+  const [userString, getString] = useState("");
+  const [fetchData, setFetchData] = useState([]);
+
+  const fetchAPI = async () => {
+    setFetchData(await askingQuestionsAPICall(number, userString));
+  };
+
   return (
-    <div className="min-h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-col-12 grid-rows-12">
-      <button className="lg:row-start-4 lg:row-end-11 lg:col-start-3 lg:col-end-8 ">
-        {" "}
-        {/*how do I target the castle for hover?*/}
-        <div className="bg-[#FAF9F600] w-1/2 h-4/5 z-1 ">
+    <div className="h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+      <button
+        className="lg:row-start-3 lg:row-end-10 lg:col-start-2 lg:col-end-7"
+        onClick={fetchAPI}
+      >
+        <div className="bg-[#FAF9F600] w-full h-full ">
           <svg
-            className="w-full h-full bg-[#FAF9f6] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500]"
+            className="w-full h-full rounded-[2rem] bg-[#FAF9f6] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500]"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512"
           >
@@ -14,23 +27,25 @@ const AskingQuestions = () => {
           </svg>
         </div>
         <div>
-          <p className="m-o rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black">
+          <p className="m-0 rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black ">
             {/* How do I change font size to 2rem on tailwind*/}
             Press Me
           </p>
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:col-start-5 lg:col-end-10">
+      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:row-end-9 lg:col-start-8 lg:col-end-12">
         <div className="flex justify-between align-baseline p-[0rem_.75rem]">
           <h2>Enter Name</h2>
-          <input type="number" placeholder="Name" />
+          <input type="text" placeholder="Name" onChange={(event)=>getString(event.target.value)}/>
         </div>
         <div className="flex justify-between align-baseline p-[0rem_.75rem]">
           <h2>Enter Time</h2>
-          <input type="number" placeholder="Time(E.g. five AM or 4:30c)" />
+          <input type="number" placeholder="Time(E.g. five AM or 4:30c)" onChange={(event)=>getNumber(event.target.value)}/>
         </div>
+        <h1>{fetchData}</h1>
       </div>
+
     </div>
   );
 };
