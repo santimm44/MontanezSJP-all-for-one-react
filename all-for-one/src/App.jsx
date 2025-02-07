@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
       <NavBar/>
-      <div className="lg:row-start-3 lg:col-start-2 lg:row-end-11 lg:col-end-7">
+      <div className="md:row-start-3 md:col-start-2 md:row-end-11 md:col-end-7">
       <img className="h-full w-full" src="public/assets/chess-rook-regular.svg" alt="large castle icon" />
       </div>
       
-      <div className="lg:col-start-8 lg:col-end-12 lg:row-start-3 p-8 lg:row-end-11 bg-[#85735D] shadow-[.5rem_.5rem_0rem_.5rem_#000] rounded-[2rem] grid grid-cols-3 grid-rows-3 h-full w-full">
+      <div className="md:col-start-8 md:col-end-12 md:row-start-3 p-8 md:row-end-11 bg-[#85735D] shadow-[.5rem_.5rem_0rem_.5rem_#000] rounded-[2rem] grid grid-cols-3 grid-rows-3 h-full w-full">
         <ul className="list-none col-span-3 row-span-3 overflow-auto">
           <li>
             <Link to="/AddingTwoNumbers" >
