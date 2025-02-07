@@ -8,7 +8,7 @@ function App() {
     const [hovering, notHovering] = useState(false);
   
   return (
-    <div className="h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+    <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
       <div className="lg:col-start-8 lg:col-end-12 lg:row-start-3 p-8 lg:row-end-11 bg-[#85735D] shadow-[.5rem_.5rem_0rem_.5rem_#000] rounded-[2rem] grid grid-cols-3 grid-rows-3 h-full w-full">
         <ul className="list-none col-span-3 row-span-3 overflow-auto">
           <li>
