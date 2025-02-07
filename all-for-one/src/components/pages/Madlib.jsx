@@ -40,7 +40,7 @@ const Madlib = () => {
       <NavBar />
 
       <button
-        className="md:row-start-2 md:row-end-3 md:col-start-6 md:col-end-8 z-0"
+        className="md:row-start-2 md:row-end-3 md:col-start-6 md:col-end-8 max-md:col-start-5 max-md:col-end-9"
         onClick={fetchAPI}
       >
         {/*how do I target the castle for hover?*/}
@@ -61,70 +61,70 @@ const Madlib = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] place-content-center rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-4 md:row-end-12 md:col-start-2 md:col-end-12">
-        <div className="h-auto grid grid-rows-3 gap-y-16 gap-x-4 grid-cols-4 p-[0rem_.75rem]">
+      <div className="bg-[#85735D] ps-[1rem] place-content-center rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-4 md:row-end-12 md:col-start-2 md:col-end-12 max-md:col-start-2 max-md:col-end-12 max-md:row-start-4 max-md:row-end-12 max-md:overflow-y-scroll">
+        <div className="h-auto grid md:grid-rows-3 md:gap-y-16 md:gap-x-4 md:grid-cols-4 max-md:grid-rows-10 max-md:gap-y-2 p-[0rem_.75rem]">
           <input
-            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            className="bg-[#FAF9F6] max-md:row-start-1 text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
             placeholder="Monster"
             onChange={(event) => getMadlibMonster(event.target.value)}
           />
           <input
-            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            className="bg-[#FAF9F6] text-black h-full max-md:row-start-2 rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
             placeholder="Monster Adjective"
             onChange={(event) => getMadlibMonsterAdjective(event.target.value)}
           />
           <input
-            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            className="bg-[#FAF9F6] max-md:row-start-3 text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
             placeholder="Noun"
             onChange={(event) => getMadlibNoun1(event.target.value)}
           />
           <input
-            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            className="bg-[#FAF9F6] max-md:row-start-4 text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
             placeholder="Second Noun"
             onChange={(event) => getMadlibNoun2(event.target.value)}
           />
           <input
-            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            className="bg-[#FAF9F6] max-md:row-start-5 text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
             placeholder="First Object"
             onChange={(event) => getMadlibObject1(event.target.value)}
           />
           <input
-            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            className="bg-[#FAF9F6] max-md:row-start-6 text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
             placeholder="Second Object"
             onChange={(event) => getMadlibObject2(event.target.value)}
           />
           <input
-            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            className="bg-[#FAF9F6] max-md:row-start-7 text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
             placeholder="First Location"
             onChange={(event) => getmadlibLocation1(event.target.value)}
           />
           <input
-            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            className="bg-[#FAF9F6] max-md:row-start-8 text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
             placeholder="Second Location"
             onChange={(event) => getmadlibLocation2(event.target.value)}
           />
           <input
-            className="col-start-2 text-black bg-[#FAF9F6] h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
-            type="Your Username"
+            className="md:col-start-2 max-md:row-start-9 text-black bg-[#FAF9F6] h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            type="text"
             placeholder="Name"
             onChange={(event) => getmadlibUserName(event.target.value)}
           />
           <input
-            className="col-start-3 text-black bg-[#FAF9F6] h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            className="md:col-start-3 max-md:row-start-10 text-black bg-[#FAF9F6] h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
             placeholder="Username Adjective"
             onChange={(event) => getmadlibAdjective(event.target.value)}
           />
         </div>
-        <div className="text-fluid mt-4">{fetchData}</div>
+        <div className="text-fluid md:mt-4 max-md:mt-6">{fetchData}</div>
       </div>
     </div>
   );
