@@ -1,8 +1,8 @@
+import NavBar from "../layout/NavBar";
 import { magic8BallAPICall } from "../services/services";
 import { useState } from "react";
 
 const Magic8Ball = () => {
-
   const [userString, getString] = useState("");
   const [fetchData, setFetchData] = useState([]);
 
@@ -11,8 +11,13 @@ const Magic8Ball = () => {
   };
 
   return (
-    <div className="h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
-        <button className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9 " onClick={fetchAPI}>
+    <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+      <NavBar />
+
+      <button
+        className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9 "
+        onClick={fetchAPI}
+      >
         {/*how do I target the castle for hover?*/}
         <div className="bg-[#FAF9F600]  w-full h-full ">
           <svg
@@ -31,15 +36,21 @@ const Magic8Ball = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-9 lg:row-end-12 lg:col-start-4 lg:col-end-10">
+      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] place-content-center shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-9 lg:row-end-12 lg:col-start-4 lg:col-end-10">
         <div className="flex justify-between align-baseline p-[0rem_.75rem]">
           <h2>Ask your question: </h2>
-          <input type="text" placeholder="Question" onChange={(event)=>getString(event.target.value)} />
+          <input
+            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            type="text"
+            placeholder="Question"
+            onChange={(event) => getString(event.target.value)}
+          />
         </div>
-        <div>
-          <h1>
-            The Magic 8 Ball Says: {fetchData}
-          </h1>
+        <div className="mt-8">
+          <div className="flex gap-x-8">
+            <p>The Magic 8 Ball Says:</p>
+            <p>{fetchData}</p>
+          </div>
         </div>
       </div>
     </div>

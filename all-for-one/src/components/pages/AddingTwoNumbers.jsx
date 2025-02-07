@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { addingTwoNumbersAPICall } from "../services/services";
+import NavBar from "../layout/NavBar";
 
 const AddingTwoNumbers = () => {
   
@@ -14,7 +15,9 @@ const AddingTwoNumbers = () => {
   };
   
   return (
-    <div className="h-screen max-h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat grid grid-cols-12 grid-rows-12">
+      <div className="h-screen max-h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat grid grid-cols-12 grid-rows-12">
+      
+      <NavBar/>
       <button className="lg:row-start-3 lg:row-end-10 lg:col-start-2 lg:col-end-7" 
       onClick=
       {
@@ -37,14 +40,14 @@ const AddingTwoNumbers = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:row-end-9 lg:col-start-8 lg:col-end-12">
+      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:row-end-9 lg:col-start-8 lg:col-end-12">
         <div className="flex justify-between align-baseline p-[0rem_.75rem]">
           <h2>Enter First Number</h2>
-          <input type="number" placeholder="First Number" onChange={(event) => getFirstNumber(event.target.value)}/>
+          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="number" placeholder="First Number" onChange={(event) => getFirstNumber(event.target.value)}/>
         </div>
-        <div className="flex justify-between align-baseline p-[0rem_.75rem]">
+        <div className="flex justify-between align-baseline p-[0rem_.75rem] mt-4">
           <h2>Enter Second Number</h2>
-          <input type="number" placeholder="Second Number" onChange={(event) => getSecondNumber(event.target.value)}/>
+          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="number" placeholder="Second Number" onChange={(event) => getSecondNumber(event.target.value)}/>
         </div>
         <div>
           <h2>

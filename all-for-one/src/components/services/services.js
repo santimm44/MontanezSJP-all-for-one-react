@@ -14,8 +14,10 @@ const askingQuestionsAPICall = async (time,name) => {
 
     return data
 }
-const greaterThanOrLessThanAPICall = async () => {
-    const fetchResponse = await fetch(``)
+const greaterThanOrLessThanAPICall = async (userFirstNumber, userSecondNumber) => {
+    const fetchResponse = await fetch(`https://lvl2allforoneapi-c6e3fbfzctccavhq.westus-01.azurewebsites.net/GreaterThanOrLessThan/GreaterOrLessThan/${userFirstNumber}/${userSecondNumber}`,{
+        method: "POST"
+    })
     const data = await fetchResponse.text()
 
     return data

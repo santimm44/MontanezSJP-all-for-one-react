@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { helloWorldAPICall } from "../services/services";
+import NavBar from "../layout/NavBar";
 
 const HelloWorld = () => {
 
@@ -12,9 +13,11 @@ const HelloWorld = () => {
 
 
   return (
-    <div className="h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+    <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+      
+      <NavBar/>
+
       <button className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9" onClick={fetchAPI}>
-        {" "}
         {/*how do I target the castle for hover?*/}
         <div className="bg-[#FAF9F600]  w-full h-full ">
           <svg
@@ -33,9 +36,9 @@ const HelloWorld = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-10 lg:row-end-12 lg:col-start-5 lg:col-end-9">
+      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-10 lg:row-end-12 lg:col-start-5 lg:col-end-9">
         <div className="flex justify-center mt-[1rem] w-full align-baseline p-[0rem_.75rem]">
-          <input className="" type="text" placeholder="Name" onChange={(event)=>getString(event.target.value)}/>
+          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="text" placeholder="Name" onChange={(event)=>getString(event.target.value)}/>
         </div>
         <div>
           <h1>

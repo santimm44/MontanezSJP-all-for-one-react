@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { reverseItNumbersOnlyAPICall } from "../services/services";
+import NavBar from "../layout/NavBar";
 
 const ReverseItNumbersOnly = () => {
 
@@ -11,7 +12,10 @@ const ReverseItNumbersOnly = () => {
   };
 
   return (
-    <div className="h-screen bg-[url(src/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+    <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
+       
+       <NavBar/>
+       
        <button className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9" onClick={fetchAPI}>
         {/*how do I target the castle for hover?*/}
         <div className="bg-[#FAF9F600]  w-full h-full ">
@@ -31,12 +35,12 @@ const ReverseItNumbersOnly = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-10 lg:row-end-12 lg:col-start-2 lg:col-end-12">
+      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-10 lg:row-end-12 lg:col-start-2 lg:col-end-12">
         <div className="flex justify-between align-baseline p-[0rem_.75rem]">
           <h2>Enter a number</h2>
-          <input type="number" placeholder="Number" onChange={(event)=>getNumber(event.target.value)}/>
+          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="number" placeholder="Number" onChange={(event)=>getNumber(event.target.value)}/>
         </div>
-        <div>
+        <div className="mt-8 p-[0rem_.75rem]">
           {fetchData}
         </div>
       </div>
