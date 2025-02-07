@@ -3,7 +3,6 @@ import { helloWorldAPICall } from "../services/services";
 import NavBar from "../layout/NavBar";
 
 const HelloWorld = () => {
-
   const [userString, getString] = useState("");
   const [fetchData, setFetchData] = useState([]);
 
@@ -11,13 +10,14 @@ const HelloWorld = () => {
     setFetchData(await helloWorldAPICall(userString));
   };
 
-
   return (
     <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
-      
-      <NavBar/>
+      <NavBar />
 
-      <button className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9" onClick={fetchAPI}>
+      <button
+        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9"
+        onClick={fetchAPI}
+      >
         {/*how do I target the castle for hover?*/}
         <div className="bg-[#FAF9F600]  w-full h-full ">
           <svg
@@ -29,21 +29,24 @@ const HelloWorld = () => {
           </svg>
         </div>
         <div>
-          <p className="m-o rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black">
+          <p className="m-o text-fluid rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black">
             {/* How do I change font size to 2rem on tailwind*/}
             Press Me
           </p>
         </div>
       </button>
 
-      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-10 lg:row-end-12 lg:col-start-5 lg:col-end-9">
-        <div className="flex justify-center mt-[1rem] w-full align-baseline p-[0rem_.75rem]">
-          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="text" placeholder="Name" onChange={(event)=>getString(event.target.value)}/>
+      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-10 md:row-end-12 md:col-start-5 md:col-end-9">
+        <div className="grid grid-cols-1 p-[0rem_.75rem]">
+          <input
+            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            type="text"
+            placeholder="Name"
+            onChange={(event) => getString(event.target.value)}
+          />
         </div>
         <div>
-          <h1>
-            {fetchData}
-          </h1>
+          <h1 className="text-fluid mt-4">{fetchData}</h1>
         </div>
       </div>
     </div>

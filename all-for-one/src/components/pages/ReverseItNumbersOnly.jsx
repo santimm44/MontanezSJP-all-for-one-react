@@ -3,7 +3,6 @@ import { reverseItNumbersOnlyAPICall } from "../services/services";
 import NavBar from "../layout/NavBar";
 
 const ReverseItNumbersOnly = () => {
-
   const [number, getNumber] = useState(0);
   const [fetchData, setFetchData] = useState([]);
 
@@ -13,10 +12,12 @@ const ReverseItNumbersOnly = () => {
 
   return (
     <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
-       
-       <NavBar/>
-       
-       <button className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9" onClick={fetchAPI}>
+      <NavBar />
+
+      <button
+        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9"
+        onClick={fetchAPI}
+      >
         {/*how do I target the castle for hover?*/}
         <div className="bg-[#FAF9F600]  w-full h-full ">
           <svg
@@ -28,21 +29,23 @@ const ReverseItNumbersOnly = () => {
           </svg>
         </div>
         <div>
-          <p className="m-o rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black">
-            {/* How do I change font size to 2rem on tailwind*/}
+          <p className="text-fluid rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black">
             Press Me
           </p>
         </div>
       </button>
 
-      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-10 lg:row-end-12 lg:col-start-2 lg:col-end-12">
-        <div className="flex justify-between align-baseline p-[0rem_.75rem]">
-          <h2>Enter a number</h2>
-          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="number" placeholder="Number" onChange={(event)=>getNumber(event.target.value)}/>
+      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-10 md:row-end-12 md:col-start-2 md:col-end-12">
+        <div className="grid grid-cols-2 p-[0rem_.75rem]">
+          <h2 className="text-fluid">Enter a number</h2>
+          <input
+            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            type="number"
+            placeholder="Number"
+            onChange={(event) => getNumber(event.target.value)}
+          />
         </div>
-        <div className="mt-8 p-[0rem_.75rem]">
-          {fetchData}
-        </div>
+        <div className="mt-8 text-fluid p-[0rem_.75rem]">{fetchData}</div>
       </div>
     </div>
   );

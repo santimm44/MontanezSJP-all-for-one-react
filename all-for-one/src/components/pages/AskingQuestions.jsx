@@ -3,7 +3,6 @@ import { askingQuestionsAPICall } from "../services/services";
 import NavBar from "../layout/NavBar";
 
 const AskingQuestions = () => {
-
   const [number, getNumber] = useState(0);
   const [userString, getString] = useState("");
   const [fetchData, setFetchData] = useState([]);
@@ -14,10 +13,10 @@ const AskingQuestions = () => {
 
   return (
     <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
-      <NavBar/>
-      
+      <NavBar />
+
       <button
-        className="lg:row-start-3 lg:row-end-10 lg:col-start-2 lg:col-end-7"
+        className="md:row-start-3 md:row-end-10 md:col-start-2 md:col-end-7"
         onClick={fetchAPI}
       >
         <div className="bg-[#FAF9F600] w-full h-full ">
@@ -30,25 +29,34 @@ const AskingQuestions = () => {
           </svg>
         </div>
         <div>
-          <p className="m-0 rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black ">
+          <p className="m-0 text-fluid rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black ">
             {/* How do I change font size to 2rem on tailwind*/}
             Press Me
           </p>
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] place-content-center rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:row-end-10 lg:col-start-8 lg:col-end-12">
-        <div className="flex justify-between align-baseline p-[0rem_.75rem]">
-          <h2>Enter Name</h2>
-          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="text" placeholder="Name" onChange={(event)=>getString(event.target.value)}/>
+      <div className="bg-[#85735D] ps-[1rem] place-content-center rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-7 md:row-end-10 md:col-start-8 md:col-end-12">
+        <div className="grid grid-cols-2 p-[0rem_.75rem]">
+          <h2 className="text-fluid">Enter Name</h2>
+          <input
+            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            type="text"
+            placeholder="Name"
+            onChange={(event) => getString(event.target.value)}
+          />
         </div>
-        <div className="flex mt-4 justify-between align-baseline p-[0rem_.75rem]">
-          <h2>Enter Time</h2>
-          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="number" placeholder="Time(E.g. five AM or 4:30c)" onChange={(event)=>getNumber(event.target.value)}/>
+        <div className="grid grid-cols-2 mt-4 p-[0rem_.75rem]">
+          <h2 className="text-fluid">Enter Time</h2>
+          <input
+            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            type="number"
+            placeholder="Time(E.g. five AM or 4:30c)"
+            onChange={(event) => getNumber(event.target.value)}
+          />
         </div>
-        <h1>{fetchData}</h1>
+        <h1 className="text-fluid mt-4">{fetchData}</h1>
       </div>
-
     </div>
   );
 };

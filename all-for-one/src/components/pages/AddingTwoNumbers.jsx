@@ -3,26 +3,22 @@ import { addingTwoNumbersAPICall } from "../services/services";
 import NavBar from "../layout/NavBar";
 
 const AddingTwoNumbers = () => {
-  
-  
   //The zero will default the useState to an integer
   const [firstNumber, getFirstNumber] = useState(0);
   const [secondNumber, getSecondNumber] = useState(0);
   const [fetchData, setFetchData] = useState([]);
-  
+
   const fetchAPI = async () => {
     setFetchData(await addingTwoNumbersAPICall(firstNumber, secondNumber));
   };
-  
+
   return (
-      <div className="h-screen max-h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat grid grid-cols-12 grid-rows-12">
-      
-      <NavBar/>
-      <button className="lg:row-start-3 lg:row-end-10 lg:col-start-2 lg:col-end-7" 
-      onClick=
-      {
-        fetchAPI
-      }>
+    <div className="h-screen max-h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat grid grid-cols-12 grid-rows-12">
+      <NavBar />
+      <button
+        className="md:row-start-3 md:row-end-10 md:col-start-2 md:col-end-7"
+        onClick={fetchAPI}
+      >
         <div className="bg-[#FAF9F600] w-full h-full ">
           <svg
             className="w-full h-full rounded-[2rem] bg-[#FAF9f6] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500]"
@@ -33,27 +29,34 @@ const AddingTwoNumbers = () => {
           </svg>
         </div>
         <div>
-          <p className="m-0 rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black ">
+          <p className="m-0 rounded-[2rem] text-fluid bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black ">
             {/* How do I change font size to 2rem on tailwind*/}
             Press Me
           </p>
         </div>
       </button>
 
-      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-7 lg:row-end-9 lg:col-start-8 lg:col-end-12">
-        <div className="flex justify-between align-baseline p-[0rem_.75rem]">
-          <h2>Enter First Number</h2>
-          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="number" placeholder="First Number" onChange={(event) => getFirstNumber(event.target.value)}/>
+      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-7 md:row-end-10 md:col-start-8 md:col-end-12">
+        <div className="grid grid-cols-2 p-[0rem_.75rem]">
+          <h2 className="text-fluid">Enter First Number</h2>
+          <input
+            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            type="number"
+            placeholder="First Number"
+            onChange={(event) => getFirstNumber(event.target.value)}
+          />
         </div>
-        <div className="flex justify-between align-baseline p-[0rem_.75rem] mt-4">
-          <h2>Enter Second Number</h2>
-          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="number" placeholder="Second Number" onChange={(event) => getSecondNumber(event.target.value)}/>
+        <div className="grid grid-cols-2 p-[0rem_.75rem] mt-4">
+          <h2 className="text-fluid">Enter Second Number</h2>
+          <input
+            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            type="number"
+            placeholder="Second Number"
+            onChange={(event) => getSecondNumber(event.target.value)}
+          />
         </div>
         <div>
-          <h2>
-            {
-            fetchData
-            }</h2>
+          <h2>{fetchData}</h2>
         </div>
       </div>
     </div>

@@ -3,7 +3,6 @@ import { oddOrEvenAPICall } from "../services/services";
 import { useState } from "react";
 
 const OddOrEven = () => {
-
   const [number, getNumber] = useState(0);
   const [fetchData, setFetchData] = useState([]);
 
@@ -13,10 +12,12 @@ const OddOrEven = () => {
 
   return (
     <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
-        
-        <NavBar/>
-        
-        <button className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9" onClick={fetchAPI}>
+      <NavBar />
+
+      <button
+        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9"
+        onClick={fetchAPI}
+      >
         {/*how do I target the castle for hover?*/}
         <div className="bg-[#FAF9F600]  w-full h-full ">
           <svg
@@ -35,15 +36,18 @@ const OddOrEven = () => {
         </div>
       </button>
 
-      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-9 lg:row-end-12 lg:col-start-4 lg:col-end-10">
-        <div className="flex justify-between align-baseline p-[0rem_.75rem]">
-          <h2>Enter number</h2>
-          <input className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]" type="number" placeholder="Question" onChange={(event)=>getNumber(event.target.value)} />
+      <div className="bg-[#85735D] place-content-center ps-[1rem] rounded-[2rem] shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-9 md:row-end-12 md:col-start-4 md:col-end-10">
+        <div className="grid grid-cols-2 p-[0rem_.75rem]">
+          <h2 className="text-fluid">Enter number</h2>
+          <input
+            className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
+            type="number"
+            placeholder="Question"
+            onChange={(event) => getNumber(event.target.value)}
+          />
         </div>
-        <div className="mt-8">
-          <h1>
-            {fetchData}
-          </h1>
+        <div>
+          <h1 className="text-fluid mt-4">{fetchData}</h1>
         </div>
       </div>
     </div>

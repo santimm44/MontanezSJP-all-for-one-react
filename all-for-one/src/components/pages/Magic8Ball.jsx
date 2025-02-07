@@ -15,7 +15,7 @@ const Magic8Ball = () => {
       <NavBar />
 
       <button
-        className="lg:row-start-2 lg:row-end-8 lg:col-start-5 lg:col-end-9 "
+        className="md:row-start-2 md:row-end-8 md:col-start-5 md:col-end-9 "
         onClick={fetchAPI}
       >
         {/*how do I target the castle for hover?*/}
@@ -29,16 +29,16 @@ const Magic8Ball = () => {
           </svg>
         </div>
         <div>
-          <p className="m-o rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black">
+          <p className="text-fluid rounded-[2rem] bg-[#FAF9F6] p-[1rem_0rem] shadow-[.5rem_.5rem_0rem_.5rem_#FF4500] z-2 text-black">
             {/* How do I change font size to 2rem on tailwind*/}
             Press Me
           </p>
         </div>
       </button>
 
-      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] place-content-center shadow-[.5rem_.5rem_0rem_.5rem_#000] lg:row-start-9 lg:row-end-12 lg:col-start-4 lg:col-end-10">
-        <div className="flex justify-between align-baseline p-[0rem_.75rem]">
-          <h2>Ask your question: </h2>
+      <div className="bg-[#85735D] ps-[1rem] rounded-[2rem] place-content-center shadow-[.5rem_.5rem_0rem_.5rem_#000] md:row-start-9 md:row-end-12 md:col-start-4 md:col-end-10">
+        <div className="grid grid-cols-2 p-[0rem_.75rem]">
+          <h2 className="text-fluid">Ask your question: </h2>
           <input
             className="bg-[#FAF9F6] text-black h-full rounded-[.5rem] border-[#D9D9D9] shadow-[0_.25rem_0rem_0rem_#000]"
             type="text"
@@ -47,7 +47,7 @@ const Magic8Ball = () => {
           />
         </div>
         <div className="mt-8">
-          <div className="flex gap-x-8">
+          <div className="flex flex-wrap text-fluid gap-x-8">
             <p>The Magic 8 Ball Says:</p>
             <p>{fetchData}</p>
           </div>

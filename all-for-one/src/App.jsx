@@ -5,7 +5,13 @@ import NavBar from "./components/layout/NavBar";
 
 function App() {
   
-  
+  {"List of What I need for responsiveness"}
+  {"Desktop"}
+  {"1. Change font-size breakpoints between 767 -> 1920"}
+  {""}
+  {""}
+
+
   
   return (
     <div className="h-screen bg-[url(/public/assets/background.jpeg)] bg-[length:100vw_100vh] bg-no-repeat bg-center grid grid-cols-12 grid-rows-12">
@@ -19,12 +25,12 @@ function App() {
           <li>
             <Link to="/AddingTwoNumbers" >
               <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black text-[1.5rem] font-bold flex w-[90%] place-items-center p-[0rem_.75rem] h-auto min-h-1 max-h-12 justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black text-fluid font-bold flex w-[90%] place-items-center p-[0rem_.75rem] h-auto min-h-1 max-h-12 justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                 type="button"
               >
-                <p>Adding Two Numbers</p>
+                <p className="text-left">Adding Numbers</p>
                 <svg
-                  className="w-auto f-full min-h-1 max-h-12" 
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]" 
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 512"
                 >
@@ -37,12 +43,12 @@ function App() {
           <li>
             <Link to="/AskingQuestions"> 
               <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black text-[1.5rem] font-bold place-items-center p-[0rem_.75rem] mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] text-fluid fill-white hover:text-black font-bold place-items-center p-[0rem_.75rem] md:mt-4 lg:mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                 type="button"
               >
-                <p>Asking Questions</p>
+                <p className="text-left">Asking Questions</p>
                 <svg
-                  className=" w-auto h-full min-h-1 max-h-12"
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 512"
                 >
@@ -55,12 +61,12 @@ function App() {
           <li>
             <Link to="/GreaterThanOrLessThan">
               <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white text-[1.5rem] font-bold place-items-center p-[0rem_.75rem] mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] fill-white text-fluid font-bold place-items-center p-[0rem_.75rem] md:mt-4 lg:mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                 type="button"
               >
-                <p>Greater Than Or Less Than</p>
+                <p className="text-left">Greater Or Less</p>
                 <svg
-                  className=" w-auto h-full min-h-1 max-h-12"
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]"
                   xmlns="http://www.w3.org/2000/svg"                 
                   viewBox="0 0 640 512"
                 >
@@ -72,12 +78,12 @@ function App() {
           <li>
             <Link to="/HelloWorld">
                <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black text-[1.5rem] font-bold place-items-center p-[0rem_.75rem] mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black text-fluid font-bold place-items-center p-[0rem_.75rem] md:mt-4 lg:mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                 type="button"
               >
-                <p>Hello World</p>
+                <p className="text-left">Hello World</p>
                 <svg
-                  className=" w-auto h-full min-h-1 max-h-12"
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]"
                   xmlns="http://www.w3.org/2000/svg"                 
                   viewBox="0 0 640 512"
                 >
@@ -90,12 +96,12 @@ function App() {
           <li>
             <Link to="/Madlib">
                <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center text-[1.5rem] font-bold p-[0rem_.75rem] mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center text-fluid font-bold p-[0rem_.75rem] md:mt-4 lg:mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                  type="button"
               >
-                <p>Madlib</p>
+                <p className="text-left">Madlib</p>
                 <svg
-                  className=" w-auto h-full min-h-1 max-h-12"
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]"
                   xmlns="http://www.w3.org/2000/svg"                 
                   viewBox="0 0 640 512"
                 >
@@ -108,12 +114,12 @@ function App() {
           <li>
             <Link to="/Magic8Ball">
                <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center text-[1.5rem] font-bold p-[0rem_.75rem] mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center text-fluid font-bold p-[0rem_.75rem] md:mt-4 lg:mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                  type="button"
               >
-                <p>Magic 8 Ball</p>
+                <p className="text-left">Magic 8 Ball</p>
                 <svg
-                  className=" w-auto h-full min-h-1 max-h-12"
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]"
                   xmlns="http://www.w3.org/2000/svg"                 
                   viewBox="0 0 640 512"
                 >
@@ -125,12 +131,12 @@ function App() {
           <li>
             <Link to="/OddOrEven">
                <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center text-[1.5rem] font-bold p-[0rem_.75rem] mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center text-fluid font-bold p-[0rem_.75rem] md:mt-4 lg:mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                 type="button"
               >
-                <p>Odd Or Even</p>
+                <p className="text-left">Odd Or Even</p>
                 <svg
-                  className=" w-auto h-full min-h-1 max-h-12"
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]"
                   xmlns="http://www.w3.org/2000/svg"                 
                   viewBox="0 0 640 512"
                 >
@@ -143,12 +149,12 @@ function App() {
           <li>
             <Link to="/RestaurantPicker" >
               <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center p-[0rem_.75rem] text-[1.5rem] font-bold mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center p-[0rem_.75rem] text-fluid font-bold md:mt-4 lg:mt-1 h-auto min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                 type="button"
               >
-                <p>Restaurant Picker</p>
+                <p className="text-left">Restaurant Picker</p>
                 <svg
-                  className=" w-auto h-full min-h-1 max-h-12"
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]"
                   xmlns="http://www.w3.org/2000/svg"                 
                   viewBox="0 0 640 512"
                 >
@@ -161,12 +167,12 @@ function App() {
           <li>
             <Link to="/ReverseItAlphanumeric">
               <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center p-[0rem_.75rem] text-[1.5rem] font-bold mt-1 flex w-[90%] h-auto min-h-1 max-h-12 align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center p-[0rem_.75rem] text-fluid font-bold md:mt-4 lg:mt-1 flex w-[90%] h-auto min-h-1 max-h-12 align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                 type="button"
               >
-                <p>Reverse It Alphanumeric</p>
+                <p className="text-left">Reverse String</p>
                 <svg
-                  className=" w-auto h-full min-h-1 max-h-12"
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]"
                   xmlns="http://www.w3.org/2000/svg"
                  
                   viewBox="0 0 640 512"
@@ -180,12 +186,12 @@ function App() {
           <li>
             <Link to="/ReverseItNumberOnly">
               <button
-                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center p-[0rem_.75rem] text-[1.5rem] font-bold h-auto mt-1 min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
+                className="bg-[#00000000] hover:fill-[#FF4500] fill-white hover:text-black place-items-center p-[0rem_.75rem] text-fluid font-bold h-auto md:mt-4 lg:mt-1 min-h-1 max-h-12 flex w-[90%] align-baseline justify-between hover:bg-[#FAF9F6] hover:rounded-[2rem]"
                 type="button"
               >
-                <p>Reverse It Numbers Only</p>
+                <p className="text-left">Reverse Numbers</p>
                 <svg
-                  className=" w-auto h-full min-h-1 max-h-12"
+                  className="min-h-8 h-[5vh] max-h-[4.5rem] min-w-8 w-[5vh] max-w-[4.5rem]"
                   xmlns="http://www.w3.org/2000/svg"                 
                   viewBox="0 0 640 512"
                 >
